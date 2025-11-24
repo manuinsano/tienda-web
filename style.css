@@ -1,9 +1,9 @@
 :root {
-    --primary-color: #007bff; /* Azul vibrante para acentos */
-    --secondary-color: #28a745; /* Verde para precios y botones de éxito */
+    --primary-color: #007bff; /* Azul vibrante */
+    --secondary-color: #28a745; /* Verde para éxito y precios */
     --bg-color: #f8f9fa; /* Fondo muy claro */
     --text-color: #343a40; /* Texto oscuro */
-    --card-shadow: 0 8px 16px rgba(0, 0, 0, 0.08); /* Sombra suave para las tarjetas */
+    --card-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
 }
 
 body {
@@ -15,7 +15,7 @@ body {
     line-height: 1.6;
 }
 
-/* --- HEADER --- */
+/* --- ENCABEZADO --- */
 .main-header {
     background: linear-gradient(135deg, var(--primary-color) 0%, #0056b3 100%);
     color: white;
@@ -36,22 +36,20 @@ body {
     opacity: 0.9;
 }
 
-/* --- GRID Y CONTENEDOR --- */
 .container {
     max-width: 1200px;
     margin: 3rem auto;
     padding: 0 1rem;
 }
 
+/* --- REJILLA DE PRODUCTOS --- */
 .products-grid {
     display: grid;
-    /* Diseño responsivo: mínimo 300px, máximo 1fr, ajusta columnas automáticamente */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
     gap: 2rem;
     padding: 1rem 0;
 }
 
-/* --- TARJETA DE PRODUCTO --- */
 .product-card {
     background-color: white;
     border-radius: 12px;
@@ -93,12 +91,11 @@ body {
     font-size: 0.95rem;
     color: #6c757d;
     min-height: 50px;
-    margin-bottom: auto; /* Empuja el botón hacia abajo */
+    margin-bottom: auto; 
 }
 
-/* --- BOTÓN DE COMPRA --- */
 .buy-button {
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     color: white;
     border: none;
     padding: 0.75rem 1.5rem;
@@ -106,15 +103,99 @@ body {
     cursor: pointer;
     font-size: 1.1rem;
     font-weight: 700;
-    transition: background-color 0.2s, transform 0.1s;
+    transition: background-color 0.2s;
     width: 100%;
     margin-top: 1.5rem; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .buy-button:hover {
+    background-color: #0056b3;
+}
+
+/* --- SECCIÓN DEL CARRITO --- */
+.cart-section {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-top: 4rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.cart-section h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 1rem;
+    margin-top: 0;
+}
+
+#cart-items {
+    min-height: 50px;
+    margin-bottom: 1.5rem;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px dashed #cccccc;
+}
+
+.item-info {
+    font-weight: 600;
+}
+
+.item-remove {
+    background: none;
+    border: none;
+    color: #dc3545; /* Rojo */
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: color 0.2s;
+}
+
+.item-remove:hover {
+    color: #c82333;
+}
+
+.cart-summary {
+    text-align: right;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.checkout-button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-top: 1rem;
+    width: 100%;
+    transition: background-color 0.2s;
+}
+
+.checkout-button:hover:not(:disabled) {
     background-color: #218838;
-    transform: translateY(-2px);
+}
+
+.checkout-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.note {
+    font-size: 0.8rem;
+    color: #6c757d;
+    text-align: center;
+    margin-top: 1rem;
 }
 
 /* --- FOOTER --- */
