@@ -1,77 +1,30 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda Profesional</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header class="main-header">
-        <div class="header-content">
-            <h1>🛍️ La Tienda Profesional</h1>
-            <p>Tecnología a tu alcance | Envío gratis a partir de $50.</p>
+</section>
+    
+    <section class="cart-section">
+        <h2>🛒 Tu Carrito de Compras</h2>
+        <div id="cart-items">
+            <p>El carrito está vacío.</p>
         </div>
-    </header>
+        <div class="cart-summary">
+            <p>Total: <span id="cart-total">$0.00</span></p>
+            <button id="checkout-button" class="checkout-button" disabled>Finalizar Pago</button>
+        </div>
+    </section>
 
-    <main class="container">
-        <section class="products-grid">
-            
-            <div class="product-card">
-                <img src="https://m.media-amazon.com/images/I/61sRNj-QZ-L._AC_SL1500_.jpg" alt="Auriculares Gamer" class="product-image">
-                <h2 class="product-title">Auriculares Gamer TWS RGB</h2>
-                <p class="product-price">$25.00</p>
-                <p class="product-description">Auriculares de alto rendimiento con luces LED azules y diseño futurista.</p>
-                <button class="buy-button">Comprar Ahora</button>
-            </div>
-            
-            <div class="product-card">
-                <img src="https://m.media-amazon.com/images/I/61Ip-yA+iUL._AC_SX466_.jpg" alt="Auriculares Colores" class="product-image">
-                <h2 class="product-title">InPods Macaron Colors</h2>
-                <p class="product-price">$28.90</p>
-                <p class="product-description">Estuche de carga con tacto suave. Disponibles en rosa, azul, verde y negro.</p>
-                <button class="buy-button">Comprar Ahora</button>
-            </div>
+</main> 
+<footer class="main-footer">
+    ```
 
-            <div class="product-card">
-                <img src="https://m.media-amazon.com/images/I/41-sWj32R9L._AC_.jpg" alt="Audífonos Pantalla LED" class="product-image">
-                <h2 class="product-title">TWS Display Digital</h2>
-                <p class="product-price">$20.99</p>
-                <p class="product-description">Con pantalla LED inteligente que muestra el porcentaje exacto de batería.</p>
-                <button class="buy-button">Comprar Ahora</button>
-            </div>
+---
 
-            <div class="product-card">
-                <img src="https://m.media-amazon.com/images/I/51rK1+bXwWL._AC_SL1000_.jpg" alt="Auriculares Transparentes" class="product-image">
-                <h2 class="product-title">Crystal Air Wireless</h2>
-                <p class="product-price">$10.00</p>
-                <p class="product-description">Diseño transparente moderno (Air 31 Style). Sonido nítido y precio increíble.</p>
-                <button class="buy-button">Comprar Ahora</button>
-            </div>
+## 🎨 Paso 2: Actualizar `style.css` (Diseño del Carrito)
 
-            <div class="product-card">
-                <img src="https://m.media-amazon.com/images/I/61N+RjG-bhL._AC_SL1500_.jpg" alt="Smartwatch" class="product-image">
-                <h2 class="product-title">Smartwatch Deportivo</h2>
-                <p class="product-price">$45.00</p>
-                <p class="product-description">Controla tu salud y notificaciones desde tu muñeca.</p>
-                <button class="buy-button">Comprar Ahora</button>
-            </div>
-            
-            <div class="product-card">
-                <img src="https://m.media-amazon.com/images/I/71Is79-iWML._AC_SL1500_.jpg" alt="Teclado" class="product-image">
-                <h2 class="product-title">Teclado Mecánico 60%</h2>
-                <p class="product-price">$60.00</p>
-                <p class="product-description">Compacto y con luces RGB personalizables.</p>
-                <button class="buy-button">Comprar Ahora</button>
-            </div>
-            
-        </section>
-    </main>
+Para que el carrito se vea bien, añade el siguiente CSS.
 
-    <footer class="main-footer">
-        <p>&copy; 2025 Tienda Profesional. Todos los derechos reservados.</p>
-    </footer>
+1.  Ve a editar tu archivo **`style.css`**.
+2.  **Pega este código al final** de tu archivo `style.css` y haz **Commit**.
 
-    <script src="script.js"></script>
-</body>
-</html>
+```css
+/* --- DISEÑO DEL CARRITO --- */
+.cart-section {
+    background-color: #ffffff
